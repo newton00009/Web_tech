@@ -1,0 +1,13 @@
+table {
+    border: 1px solid black;
+
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  body{
+    background: rgb(0,194,255);
+    background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(8,81,125,1) 97%, rgba(5,66,143,1) 100%);
+  }
