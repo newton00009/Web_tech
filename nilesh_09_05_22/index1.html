@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <form id="f1">
+      <label>First number:</label><br />
+      <input type="number" id="n1" /><br />
+      <label>Second number:</label><br />
+      <input type="number" id="n2" name="inp" /><br />
+    </form>
+    <button onclick="myFunction()">Add two Numbers</button>
+    <br />
+    <label>The Answer is :</label>
+    <br />
+    <label id="ans"></label>
+
+    <script>
+      function myFunction() {
+        let n1 = parseInt(document.getElementById("n1").value);
+        let n2 = parseInt(document.getElementById("n2").value);
+        let c = n1 + n2;
+
+        document.getElementById("ans").innerHTML = c;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <button onclick="myFunction()">Add two Numbers</button>
+
+    <p id="demo"></p>
+    <br />
+    <p id="demo1"></p>
+    <script>
+      function myFunction() {
+        let n1 = prompt("Please enter first number");
+        let n2 = prompt("Please enter second number");
+        if (n1 != null && n2 != null) {
+          try {
+            var num1 = parseInt(n1);
+            if (isNaN(num1)) {
+              throw "n1 not a number";
+              alert("n1 not a number");
+              return;
+            }
+            var num2 = parseInt(n2);
+            if (isNaN(num2)) {
+              throw "n2 not a number";
+              alert("n2 not a number");
+              return;
+            }
+            let c = num1 + num2;
+            alert("The Sum is\n" + c);
+
+            document.getElementById("demo1").innerHTML = "The ans is : " + c;
+          } catch (err) {
+            console.log(err);
+          }
+
+          //   let num1 = parseInt(n1);
+          //   let num2 = parseInt(n2);
+        }
+      }
+    </script>
+  </body>
+</html>
