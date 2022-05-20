@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    
+
+    <form id="f1">
+        <input onfocus="this.value=''" type="number" id="num" />
+        <br>
+        <br>
+        <input type="button" id="addBtn"onclick="addValues();" value="Add an Element" />
+        <br />
+        <br>
+        <input type="button" id="showBtn" onclick="showValues();" value="Show the array" />
+        <div id="container"></div>
+
+<br>
+<br>
+        <select id="op">
+          <option>--Please choose an option--</option>
+          <option value="1">toString()</option>
+          <option value="2">pop()</option>
+          <option value="3">push()</option>
+          <option value="4">shift()</option>
+          <option value="5">unshift()</option>
+          <option value="6">reverse() </option>
+          <option value="7">max()</option>
+          <option value="8">sort()</option>
+        </select>
+        <br />
+      </form>
+      <br>
+      <br>
+      <button onclick="myFunction()">Calculate</button>
+      <br />
+
+      <label>The Answer is :</label>
+      <br />
+      <div id="ans"></div>
+
+      <script>
+
+
+          var arr = [];
+
+function addValues() {
+ 	var input = parseInt (document.getElementById('num').value);
+ 	if(input.value == "" || input.value == "null")
+ 		alert("The element can't be empty or null");
+ 	else
+ 		arr.push(input);
+ input.value = " ";
+}
+
+
+function showValues() {
+ 	var html = '';
+    //  arr[0]=1;
+    //  arr[1]=2;
+    // 
+ 	for (var i=0; i<arr.length; i++) {
+ 		html += '<div>' + arr[i] + '</div>';  //  arr[0]=1;
+    //  arr[1]=2;
+   	}
+ 	var container = document.getElementById('container');
+ 	container.innerHTML = html;
+}
+
+
+
+
+
+
+
+
+function myFunction() {
+        let result;
+
+        // take the operator input
+        const operator = document.getElementById("op").value;
+
+        // take the operand inpuvar arr = [
+        switch (operator) {
+          case "1":
+          arr.toString();
+            break;
+
+          case "2":
+            arr.pop();
+            break;
+
+          case "3":
+          let n1 = parseInt( prompt("Please enter the number to be pushed"));
+          arr.push(n1);
+          
+            break;
+
+          case "4":
+              arr.shift();
+  
+            break;
+
+            case "5":
+            let n2 = prompt("Please enter the number to be pushed");
+                arr.unshift(n2);
+   
+            break;
+
+          case "6":
+              arr.reverse();
+      
+            break;
+
+          case "7":
+              
+          var container = document.getElementById('ans');
+          console.log(Math.max.apply(null, arr));
+          container.innerHTML =   Math.max.apply(null, arr);
+
+           
+            break;
+
+          case "8":
+              arr.sort();
+         
+            break;
+
+          default:
+            //console.log("Invalid operator");
+            break;
+        }
+
+        // let c = n1 + n2;
+        if(operator!="7")
+        {
+     var html = '';
+ 	for (var i=0; i<arr.length; i++) {
+ 		html += '<div>' + arr[i] + '</div>';
+   	}
+ 	var container = document.getElementById('ans');
+ 	container.innerHTML = html;
+}
+
+      }
+
+
+      </script>
+
+
+</body>
+</html>
