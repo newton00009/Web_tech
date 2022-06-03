@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pali</title>
+</head>
+<body>
+    <input type="text" placeholder="Type something..." id="myInput">
+    <br>
+    <br>
+    <button onclick=myFunction()>Check palindrome</button>
+    <br>
+    <br>
+    <div id="ans"></div>
+
+
+<script>
+
+
+ let myFunction =()=>{
+    var string = document.getElementById("myInput").value;
+    var container = document.getElementById('ans');
+// console.log(str)
+
+
+const len = string.length;
+
+// loop through half of the string
+for (let i = 0; i < len / 2; i++) {
+
+    // check if first and last string are same
+    if (string[i] !== string[len - 1 - i]) {
+        container.innerHTML= 'It is not a palindrome';
+        return;
+    }
+}
+   
+   container.innerHTML = 'It is a palindrome';
+
+}
+
+</script>
+
+</body>
+</html>
