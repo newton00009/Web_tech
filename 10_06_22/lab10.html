@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Sampling</title>
+</head>
+<body>
+    <input onfocus="this.value=''" type="text" id="val" placeholder="Enter the text"/>
+    <br>
+    <br>
+
+ 
+    <input type="button" id="addBtn"onclick=addValues() value="Enter the value" />
+    <br />
+    <br>
+    <input type="button" id="showBtn" onclick=showValues() value="Show the array" />
+    <div id="container"></div>
+
+
+    <script>
+        var str;
+        var num=0;
+        //function to take input
+        
+        function addValues() {
+         str=document.getElementById('val').value;
+        // num = parseInt (document.getElementById('num').value);
+        
+           
+            
+        // input.value = " ";
+        }
+        
+        
+        
+        //function to show input
+function showValues() 
+{
+        
+var newname='';
+newname[0]=str[0].toUpperCase();
+newname+='.';
+    for (var i=1; i<str.length; i++)    
+                if(str==' ')
+                break;        
+    
+ newname+=str[i].toUpperCase()
+ newname+='. ';
+ for (var k=i+2; i<str.length; i++)    
+                if(str==' ')
+        
+     
+        
+    html += str+'<br>';
+    var container = document.getElementById('container');
+    container.innerHTML = html;
+}
+        </script>
+
+</body>
+</html>

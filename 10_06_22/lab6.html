@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square</title>
+</head>
+<body>
+    <!-- <input onfocus="this.value=''" type="number" id="num" />
+    <br>
+    <br> -->
+    <input type="button" id="addBtn"onclick=addValues() value="Enter the value" />
+    <br />
+    <br>
+    <input type="button" id="showBtn" onclick=showValues() value="Show the array" />
+    <div id="container"></div>
+
+
+
+
+<script>
+
+var arr = [];
+
+var num=0;
+//function to take input
+
+function addValues() {
+    num = prompt("Please enter the no");
+}
+
+
+
+//function to show input
+function showValues() {
+   var html = '';
+  //  arr[0]=1;
+  //  arr[1]=2;
+  // 
+
+var a=num;
+var exp='';
+   for (var i=num; i<num*num; i++) {
+
+   
+       html += '<div>' + a*a + '</div>'; 
+       a++; 
+  
+
+       //  arr[0]=1;
+  //  arr[1]=2;
+     }
+   var container = document.getElementById('container');
+   container.innerHTML = html;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid</title>
+</head>
+<body>
+
+
+
+    <input onfocus="this.value=''" type="number" id="num" />
+    <br>
+    <br>
+    <input type="button" id="addBtn"onclick=addValues() value="Enter the value" />
+    <br />
+    <br>
+    <input type="button" id="showBtn" onclick=showValues() value="Show the array" />
+    <div id="container"></div>
+
+
+
+
+<script>
+
+var arr = [];
+
+var num=0;
+//function to take input
+
+function addValues() {
+num = parseInt (document.getElementById('num').value);
+   if(input.value == "" || input.value == "null")
+       alert("The element can't be empty or null");
+   
+    
+input.value = " ";
+}
+
+
+
+//function to show input
+function showValues() {
+   var html = '';
+  //  arr[0]=1;
+  //  arr[1]=2;
+  // 
+
+var a=1;
+var exp='';
+   for (var i=0; i<num; i++) {
+
+    exp+=a;
+       html += '<div>' + exp + '</div>'; 
+       a++; 
+  
+
+       //  arr[0]=1;
+  //  arr[1]=2;
+     }
+   var container = document.getElementById('container');
+   container.innerHTML = html;
+}
+</script>
+</body>
+</html>
