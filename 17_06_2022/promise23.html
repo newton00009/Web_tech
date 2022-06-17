@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <input onfocus="this.value=''"  type="text" placeholder="Type location..." id="location">
+    <br>
+    <br>
+    <button onclick=myFunction()>Check</button>
+    <br>
+    <br>
+    <div id="ans"></div>
+
+
+
+<script>
+
+let myFunction =()=>{
+var loc= document.getElementById('location').value;
+
+
+let location = new Promise(function (resolve, reject) {
+    if (loc=='Paris') {
+        resolve("Let's take a trip to Paris");
+    } else {
+        reject("Invalid Location");
+    }
+})
+.then(function(value)
+{
+    console.log(value)
+var ans=document.getElementById('ans')
+ans.innerHTML=value;
+}
+)
+.catch(function(value)
+{
+    console.log(value)
+var ans=document.getElementById('ans')
+ans.innerHTML=value;
+})
+
+        }
+    
+    
+</script>
+
+</body>
+</html>
